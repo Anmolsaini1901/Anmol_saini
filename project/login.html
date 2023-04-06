@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+        <head>
+          <div class="navbar">
+            <body bgcolor="black">
+              <a href="index.html">Home</a>
+              
+              <div class="dropdown">
+                  <button class="dropbtn">View
+                      <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                      <a href="ViewStudent.php">Student</a>
+                      <a href="ViewParent.php">Parent</a>
+                      <a href="ViewTeacher.php">Teacher</a>
+                      <a href="ViewClass.php">Class</a>
+                      <a href="Viewlib.php">Library</a>
+                  </div>
+              </div>
+              <div class="dropdown">
+                  <button class="dropbtn">Add
+                      <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                      <a href="AddStudent.html">Student</a>
+                      <a href="AddParent.html">Parent</a>
+                      <a href="AddTeacher.html">Teacher</a>
+                      <a href="AddClass.html">Class</a>
+                      <a href="lib.html">Library</a>
+                  </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Delete
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="deletestudent.php">Student</a>
+                    <a href="deleteparent.php">Parent</a>
+                    <a href="deleteteacher.php">Teacher</a>
+                    <a href="deleteclass.php">Class</a>
+                    <a href="deletelib.php">Library</a>
+                </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Login
+                  <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                  <a href="login.php">Login now</a>
+                  <a href="register.html">Register now</a>
+                 
+              </div>
+          </div>
+              <a href="Contact.html">Contact Us</a>
+          </div>
+                <div class="container">
+                  <form method="post" action="login.php"> </form>
+                          <label for="username"><h1><b>Username</b></h1></label>
+                          <input type="text" id="username" name="username" required>
+                          <br>
+                      
+                          <label for="psw"><h1><b>Password</b></h1></label>
+                        <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                      <br>
+                      <input type="submit" name="submit">
+                        </form>
+                      </div>
+                      
+                      <div id="message">
+                        <h3>Password must contain the following:</h3>
+                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                        <p id="number" class="invalid">A <b>number</b></p>
+                        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                      </div> 
+        </head>
+</html>

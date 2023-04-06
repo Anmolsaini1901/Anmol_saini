@@ -1,0 +1,174 @@
+<!--This code is an HTML file that creates a navigation bar with dropdown menus for a website. The navigation bar contains links to various pages, such as Home, View, Add, Delete,
+   Login, and Contact Us.
+
+The code also includes a form that allows users to input information about a class level and section. The form has a submit button that sends the data to a PHP file named 
+"AddClass.php".
+
+The styling of the navigation bar is done using CSS. The background color of the body is set to red using the "bgcolor" attribute. The font used in the navigation bar
+ is Arial, Helvetica, sans-serif. The dropdown menus are styled with a gray background color, and their contents are aligned to the left. When the user hovers over a link or 
+ a dropdown menu, the background color changes to red or light gray, respectively.
+
+The code also uses the Font Awesome library to add icons to the dropdown buttons-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: red;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+
+    <body bgcolor="#df0000">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">View
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="ViewStudent.php">Student</a>
+          <a href="ViewParent.php">Parent</a>
+          <a href="ViewTeacher.php">Teacher</a>
+          <a href="ViewClass.php">Class</a>
+          <a href="Viewlib.php">Library</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Add
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="teststudent.php">Student</a>
+          <a href="AddParent.html">Parent</a>
+          <a href="AddTeacher.html">Teacher</a>
+          <a href="AddClass.html">Class</a>
+          <a href="lib.html">Library</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Delete
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="deletestudent.php">Student</a>
+          <a href="deleteparent.php">Parent</a>
+          <a href="deleteteacher.php">Teacher</a>
+          <a href="deleteclass.php">Class</a>
+          <a href="deletelib.php">Library</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Login
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="login.php">Login now</a>
+          <a href="register.html">Register now</a>
+
+        </div>
+      </div>
+      <a href="Contact.html">Contact Us</a>
+  </div>
+
+  <div>
+    <br>
+    <form method="post" action="AddClass.php">
+
+      <H1>TOTAL CAPACITY OF EACH CLASS IS 50 STUDENTS</H1>
+
+
+      <label for="classlevel">
+        <h3><b>Class level:</b></h3>
+      </label>
+      <input type="text" name="classlevel">
+      <br><br>
+
+      <label for="classsection">
+        <h3><b>class Section</b></h3>:
+      </label>
+      <input type="text" name="classsection">
+      <br><br>
+
+      <br><br>
+
+
+
+
+      <input type="submit" name="submit">
+
+    </form>
+  </div>
+
+</body>
+
+</html>
